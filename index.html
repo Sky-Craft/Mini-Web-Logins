@@ -1,0 +1,21 @@
+<html>
+  <header>Login</header>
+
+  <input type="text" id="password" />
+  <button id="submit">Submit</button>
+</html>
+
+<script>
+  var box = document.getElementById('password');
+  console.log(box);
+  var password = 'pog';
+  var element = document.getElementById('submit');
+
+  element.addEventListener('click', function() {
+    console.log(box.value);
+    if (box.value === password) {
+      console.log('u win');
+      window.location.href = 'admin.html';
+    }
+  });
+</script>
