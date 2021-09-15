@@ -3,19 +3,29 @@
 
   <input type="text" id="password" />
   <button id="submit">Submit</button>
+  <br>
+ change passowrd <input id="store" type="text">
+ <button id="change" >Change</button>
 </html>
 
 <script>
   var box = document.getElementById('password');
-  console.log(box);
-  var password = 'pog';
+  var store = document.getElementById('store');
+  var change = document.getElementById('change');
+  var password = store.value
   var element = document.getElementById('submit');
 
   element.addEventListener('click', function() {
     console.log(box.value);
     if (box.value === password) {
-      console.log('u win');
+      
       window.location.href = 'admin.html';
     }
   });
+
+  change.addEventListener('click', function() {
+   password = store.value
+   
+  });
+
 </script>
